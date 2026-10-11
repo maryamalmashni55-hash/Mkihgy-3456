@@ -1,0 +1,6 @@
+{
+  "name": "يوم الفضاء العالمي: ثورة الصواريخ",
+  "description": "تجربة تفاعلية سينمائية ثلاثية الأبعاد تحتفي بأسبوع الفضاء العالمي ومسيرة ثورة الصواريخ ومحاكاة النظام الشمسي.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

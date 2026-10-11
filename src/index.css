@@ -1,0 +1,75 @@
+@import "tailwindcss";
+
+@layer base {
+  html {
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  body {
+    font-family: 'Readex Pro', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    background-color: #030509;
+    color: #f1f5f9;
+    overflow-x: hidden;
+    letter-spacing: -0.01em;
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Cairo', 'Readex Pro', sans-serif;
+    letter-spacing: -0.02em;
+    font-weight: 800;
+  }
+
+  /* Make icons render crisply and never shrink or misalign in flex layouts */
+  svg.lucide {
+    display: inline-block;
+    vertical-align: middle;
+    flex-shrink: 0;
+  }
+}
+
+/* Custom Cosmic Scrollbar */
+::-webkit-scrollbar {
+  width: 7px;
+}
+::-webkit-scrollbar-track {
+  background: #030509;
+}
+::-webkit-scrollbar-thumb {
+  background: #1e293b;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #00f0ff;
+}
+
+/* Cosmic glows & glass effect */
+.glass-panel {
+  background: rgba(8, 14, 28, 0.75);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(56, 189, 248, 0.16);
+}
+
+.glass-panel-glow {
+  background: rgba(10, 16, 32, 0.85);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(56, 189, 248, 0.32);
+  box-shadow: 0 0 35px -5px rgba(14, 165, 233, 0.18), inset 0 0 20px 0 rgba(56, 189, 248, 0.05);
+}
+
+.cosmic-radial-glow {
+  background: radial-gradient(circle at 50% 30%, rgba(14, 165, 233, 0.15), transparent 70%),
+              radial-gradient(circle at 80% 80%, rgba(99, 102, 241, 0.1), transparent 60%);
+}
+
+@keyframes pulseGlow {
+  0%, 100% { opacity: 0.4; transform: scale(1); }
+  50% { opacity: 0.8; transform: scale(1.05); }
+}
+
+.animate-pulse-glow {
+  animation: pulseGlow 4s ease-in-out infinite;
+}
